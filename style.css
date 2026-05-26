@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav img{
+    width: 60px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+
+nav ul li a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: #fc8019;
+}
+
+.hemburger{
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.container{
+    width: 100%;
+    padding: 30px 6%;
+}
+
+/* ================= TOP BANNER ================= */
+
+.top-banner h3{
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.top-banner-dishes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.top-banner-dishes::-webkit-scrollbar{
+    display: none;
+}
+
+.dish{
+    min-width: 140px;
+}
+
+.top-banner-dishes .dish img{
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.top-banner-dishes .dish img:hover{
+    transform: scale(1.05);
+}
+
+/* ================= RESTAURANTS ================= */
+
+.top-restaurants{
+    margin-top: 60px;
+}
+
+.top-restaurants h3{
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.restaurants-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.restaurant-card{
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.restaurant-card:hover{
+    transform: translateY(-5px);
+}
+
+.restaurant-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.restaurant-card h4{
+    margin-top: 12px;
+    font-size: 1.1rem;
+}
+
+.restaurant-card p{
+    margin-top: 5px;
+    color: #555;
+    font-size: 15px;
+}
+.copyright{
+    text-align: center;
+    padding: 20px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+/* ================= LAPTOP ================= */
+
+@media screen and (max-width: 1200px){
+
+    .restaurants-list{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+/* ================= TABLET ================= */
+
+@media screen and (max-width: 992px){
+
+    nav{
+        padding: 15px 5%;
+    }
+
+    nav ul{
+        gap: 20px;
+    }
+
+    nav ul li a{
+        font-size: 14px;
+    }
+
+    .restaurants-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .top-banner h3,
+    .top-restaurants h3{
+        font-size: 1.7rem;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width: 768px){
+
+    nav ul{
+        display: none;
+    }
+
+    .hemburger{
+        display: block;
+    }
+
+    .container{
+        padding: 20px 4%;
+    }
+
+    .top-banner h3,
+    .top-restaurants h3{
+        font-size: 1.4rem;
+    }
+
+    .dish{
+        min-width: 110px;
+    }
+
+    .restaurants-list{
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant-card img{
+        height: 240px;
+    }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media screen and (max-width: 480px){
+
+    nav{
+        padding: 12px 4%;
+    }
+
+    nav img{
+        width: 50px;
+    }
+
+    .top-banner h3,
+    .top-restaurants h3{
+        font-size: 1.2rem;
+    }
+
+    .dish{
+        min-width: 95px;
+    }
+
+    .restaurant-card img{
+        height: 200px;
+    }
+
+    .restaurant-card h4{
+        font-size: 1rem;
+    }
+
+    .restaurant-card p{
+        font-size: 13px;
+    }
+
+}
